@@ -1,57 +1,111 @@
 /* =========================================================
    OUR MAHESHKHALI — MAIN.JS
-   Complete — Fixed
+   Cinematic Loading + Complete Website
 ========================================================= */
 
 /* =========================================================
-   1. LOADING SCREEN
+   1. CINEMATIC LOADING SCREEN — SCENE MANAGEMENT
 ========================================================= */
 
-const loadingMessages = [
-  "Initializing Maheshkhali...",
-  "Loading Digital Platform...",
-  "Loading Information...",
-  "Loading Community...",
-  "Loading Services...",
-  "Loading Tourism...",
-  "Preparing Your Experience..."
+const scenes = [
+  { id: "sceneQuran",     duration: 6000 },  /* Quranic Intro — 6s */
+  { id: "sceneBD",        duration: 4000 },  /* Bangladesh Map — 4s */
+  { id: "sceneDhkCtg",    duration: 4500 },  /* Dhaka → Chattogram — 4.5s */
+  { id: "sceneCtgCox",    duration: 4500 },  /* Chattogram → Cox's Bazar — 4.5s */
+  { id: "sceneOcean",     duration: 4000 },  /* Bay of Bengal — 4s */
+  { id: "sceneMhk",       duration: 4000 },  /* Maheshkhali Island — 4s */
+  { id: "sceneMap3d",     duration: 6000 },  /* 3D Map + 8 Unions — 6s */
+  { id: "sceneFinal",     duration: 4000 }   /* Final Welcome — 4s */
 ];
 
 const loader = document.getElementById("loader");
-const loaderFill = document.getElementById("loaderFill");
-const loaderPercent = document.getElementById("loaderPercent");
-const loaderMsg = document.getElementById("loaderMsg");
+const flFill = document.getElementById("flFill");
+const flPercent = document.getElementById("flPercent");
 
+let currentScene = 0;
+let sceneTimer = null;
 let progress = 0;
 
-if (loader) {
-  const loadingInterval = setInterval(() => {
-    progress += Math.random() * 11;
+/* Progress Bar Animate */
+function animateProgress(startVal, endVal, duration) {
+  const startTime = performance.now();
+  const start = startVal;
+  const diff = endVal - start;
 
-    if (progress >= 100) {
-      progress = 100;
-      clearInterval(loadingInterval);
+  function step(now) {
+    const elapsed = now - startTime;
+    const t = Math.min(elapsed / duration, 1);
+    const eased = t < 0.5
+      ? 2 * t * t
+      : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
-      loaderFill.style.width = "100%";
-      loaderPercent.textContent = "100%";
-      loaderMsg.textContent = "Welcome to OUR MAHESHKHALI 🌴";
+    progress = start + diff * eased;
 
-      setTimeout(() => {
-        loader.classList.add("hide");
-      }, 1500);
-      return;
+    if (flFill) flFill.style.width = progress + "%";
+    if (flPercent) flPercent.textContent = Math.floor(progress) + "%";
+
+    if (t < 1) {
+      requestAnimationFrame(step);
     }
-
-    loaderFill.style.width = progress + "%";
-    loaderPercent.textContent = Math.floor(progress) + "%";
-
-    const msgIndex = Math.min(
-      Math.floor(progress / 15),
-      loadingMessages.length - 1
-    );
-    loaderMsg.textContent = loadingMessages[msgIndex];
-  }, 220);
+  }
+  requestAnimationFrame(step);
 }
+
+/* Show a Scene */
+function showScene(index) {
+  document.querySelectorAll(".scene").forEach(s => s.classList.remove("active"));
+
+  const scene = scenes[index];
+  if (!scene) return;
+
+  const el = document.getElementById(scene.id);
+  if (el) el.classList.add("active");
+
+  /* Progress calculation */
+  const totalDuration = scenes.reduce((a, s) => a + s.duration, 0);
+  const startProgress = (scenes.slice(0, index).reduce((a, s) => a + s.duration, 0) / totalDuration) * 100;
+  const endProgress = ((scenes.slice(0, index + 1).reduce((a, s) => a + s.duration, 0)) / totalDuration) * 100;
+
+  animateProgress(startProgress, endProgress, scene.duration);
+}
+
+/* Next Scene */
+function nextScene() {
+  currentScene++;
+  if (currentScene >= scenes.length) {
+    finishLoading();
+    return;
+  }
+  showScene(currentScene);
+
+  sceneTimer = setTimeout(nextScene, scenes[currentScene].duration);
+}
+
+/* Finish Loading */
+function finishLoading() {
+  if (flFill) flFill.style.width = "100%";
+  if (flPercent) flPercent.textContent = "100%";
+
+  setTimeout(() => {
+    if (loader) loader.classList.add("hide");
+    document.body.style.overflow = "";
+  }, 800);
+}
+
+/* Start Cinematic Journey */
+if (loader) {
+  document.body.style.overflow = "hidden";
+  showScene(0);
+  sceneTimer = setTimeout(nextScene, scenes[0].duration);
+}
+
+/* Skip on ESC */
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && loader && !loader.classList.contains("hide")) {
+    if (sceneTimer) clearTimeout(sceneTimer);
+    finishLoading();
+  }
+});
 
 
 /* =========================================================
@@ -62,16 +116,11 @@ function updateDateTime() {
   const now = new Date();
 
   const dateStr = now.toLocaleDateString("bn-BD", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
+    weekday: "long", year: "numeric", month: "long", day: "numeric"
   });
 
   const timeStr = now.toLocaleTimeString("bn-BD", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
+    hour: "2-digit", minute: "2-digit", second: "2-digit"
   });
 
   const dateEl = document.getElementById("liveDate");
@@ -80,7 +129,6 @@ function updateDateTime() {
   if (dateEl) dateEl.textContent = "📅 " + dateStr;
   if (timeEl) timeEl.textContent = "🕐 " + timeStr;
 }
-
 updateDateTime();
 setInterval(updateDateTime, 1000);
 
@@ -90,13 +138,11 @@ setInterval(updateDateTime, 1000);
 ========================================================= */
 
 const yearEl = document.getElementById("year");
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 
 /* =========================================================
-   4. TOAST NOTIFICATION SYSTEM (সবার আগে define)
+   4. TOAST NOTIFICATION
 ========================================================= */
 
 const toastContainer = document.getElementById("toastContainer");
@@ -109,7 +155,6 @@ function showToast(message, type = "", duration = 3000) {
   toast.textContent = message;
 
   toastContainer.appendChild(toast);
-
   setTimeout(() => toast.classList.add("show"), 50);
 
   setTimeout(() => {
@@ -117,7 +162,6 @@ function showToast(message, type = "", duration = 3000) {
     setTimeout(() => toast.remove(), 400);
   }, duration);
 }
-
 window.showToast = showToast;
 
 
@@ -129,7 +173,6 @@ const themeBtn = document.getElementById("themeBtn");
 
 function loadTheme() {
   const savedTheme = localStorage.getItem("theme") || "light";
-
   if (savedTheme === "dark") {
     document.body.classList.add("dark");
     if (themeBtn) themeBtn.textContent = "☀️ Light";
@@ -144,13 +187,11 @@ if (themeBtn) {
     const isDark = document.body.classList.toggle("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
     themeBtn.textContent = isDark ? "☀️ Light" : "🌙 Dark";
-
     if (typeof showToast === "function") {
       showToast(isDark ? "🌙 Dark Mode চালু" : "☀️ Light Mode চালু");
     }
   });
 }
-
 loadTheme();
 
 
@@ -159,36 +200,23 @@ loadTheme();
 ========================================================= */
 
 const langBtn = document.getElementById("langBtn");
-
 let currentLang = localStorage.getItem("lang") || "bn";
 
 const translations = {
   bn: {
-    home: "🏠 হোম",
-    about: "ℹ️ পরিচিতি",
-    tourism: "🌴 পর্যটন",
-    education: "🎓 শিক্ষা",
-    health: "🏥 স্বাস্থ্য",
-    business: "🏪 ব্যবসা",
-    products: "🛍️ পণ্য",
-    map: "🗺️ ম্যাপ",
-    emergency: "🚨 জরুরি"
+    home: "🏠 হোম", about: "ℹ️ পরিচিতি", tourism: "🌴 পর্যটন",
+    education: "🎓 শিক্ষা", health: "🏥 স্বাস্থ্য", business: "🏪 ব্যবসা",
+    products: "🛍️ পণ্য", map: "🗺️ ম্যাপ", emergency: "🚨 জরুরি"
   },
   en: {
-    home: "🏠 Home",
-    about: "ℹ️ About",
-    tourism: "🌴 Tourism",
-    education: "🎓 Education",
-    health: "🏥 Health",
-    business: "🏪 Business",
-    products: "🛍️ Products",
-    map: "🗺️ Map",
-    emergency: "🚨 Emergency"
+    home: "🏠 Home", about: "ℹ️ About", tourism: "🌴 Tourism",
+    education: "🎓 Education", health: "🏥 Health", business: "🏪 Business",
+    products: "🛍️ Products", map: "🗺️ Map", emergency: "🚨 Emergency"
   }
 };
 
 function updateLanguage() {
-  const navLinks = document.querySelectorAll(".nav-link");
+  const navLinks = document.querySelectorAll(".main-nav > .nav-link");
   const keys = ["home", "about", "tourism", "education", "health",
                 "business", "products", "map", "emergency"];
 
@@ -203,7 +231,6 @@ function updateLanguage() {
       ? "🌐 বাংলা | English"
       : "🌐 English | বাংলা";
   }
-
   document.documentElement.lang = currentLang;
 }
 
@@ -212,15 +239,11 @@ if (langBtn) {
     currentLang = currentLang === "bn" ? "en" : "bn";
     localStorage.setItem("lang", currentLang);
     updateLanguage();
-
     if (typeof showToast === "function") {
-      showToast(currentLang === "bn"
-        ? "🇧🇩 ভাষা পরিবর্তন: বাংলা"
-        : "🇬🇧 Language changed: English");
+      showToast(currentLang === "bn" ? "🇧🇩 ভাষা: বাংলা" : "🇬🇧 Language: English");
     }
   });
 }
-
 updateLanguage();
 
 
@@ -228,12 +251,12 @@ updateLanguage();
    7. SEARCH MODAL
 ========================================================= */
 
-const searchModal    = document.getElementById("searchModal");
+const searchModal = document.getElementById("searchModal");
 const searchBackdrop = document.getElementById("searchBackdrop");
-const searchClose    = document.getElementById("searchClose");
-const searchInput    = document.getElementById("searchInput");
-const searchBtn      = document.getElementById("searchBtn");
-const searchResults  = document.getElementById("searchResults");
+const searchClose = document.getElementById("searchClose");
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const searchResults = document.getElementById("searchResults");
 
 const searchData = [
   { icon: "🏘️", name: "Dhalghata Union", link: "pages/about.html#dhalghata" },
@@ -247,10 +270,10 @@ const searchData = [
   { icon: "🛕", name: "Adinath Temple", link: "pages/tourism.html#adinath" },
   { icon: "⛰️", name: "Mainak Hill", link: "pages/tourism.html#mainak" },
   { icon: "🏝️", name: "Sonadia Island", link: "pages/tourism.html#sonadia" },
-  { icon: "🏖️", name: "Charpata Sea Beach", link: "pages/tourism.html#beaches" },
+  { icon: "🏖️", name: "Charpata Beach", link: "pages/tourism.html#beaches" },
   { icon: "🏥", name: "Upazila Health Complex", link: "pages/health.html#hospital" },
   { icon: "🎓", name: "Maheshkhali College", link: "pages/education.html#college" },
-  { icon: "🏪", name: "Local Business Directory", link: "pages/business.html" },
+  { icon: "🏪", name: "Business Directory", link: "pages/business.html" },
   { icon: "🛍️", name: "Local Products", link: "pages/local-products.html" },
   { icon: "🚨", name: "Emergency Contacts", link: "pages/emergency.html" },
   { icon: "🗺️", name: "Map & Locations", link: "pages/map.html" }
@@ -268,10 +291,7 @@ function closeSearch() {
   searchModal.classList.remove("open");
   searchModal.setAttribute("aria-hidden", "true");
   if (searchInput) searchInput.value = "";
-  if (searchResults) {
-    searchResults.innerHTML =
-      '<p class="search-hint">Type something to search...</p>';
-  }
+  if (searchResults) searchResults.innerHTML = '<p class="search-hint">Type something to search...</p>';
 }
 
 if (searchBtn) searchBtn.addEventListener("click", openSearch);
@@ -283,8 +303,7 @@ if (searchInput) {
     const query = e.target.value.trim().toLowerCase();
 
     if (query.length === 0) {
-      searchResults.innerHTML =
-        '<p class="search-hint">Type something to search...</p>';
+      searchResults.innerHTML = '<p class="search-hint">Type something to search...</p>';
       return;
     }
 
@@ -293,23 +312,18 @@ if (searchInput) {
     );
 
     if (matches.length === 0) {
-      searchResults.innerHTML =
-        '<p class="search-hint">❌ No results found</p>';
+      searchResults.innerHTML = '<p class="search-hint">❌ No results found</p>';
       return;
     }
 
-    searchResults.innerHTML = matches.map(item => `
-      <a class="search-result-item" href="${item.link}">
-        ${item.icon} ${item.name}
-      </a>
-    `).join("");
+    searchResults.innerHTML = matches.map(item =>
+      `<a class="search-result-item" href="${item.link}">${item.icon} ${item.name}</a>`
+    ).join("");
   });
 }
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && searchModal?.classList.contains("open")) {
-    closeSearch();
-  }
+  if (e.key === "Escape" && searchModal?.classList.contains("open")) closeSearch();
   if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
     e.preventDefault();
     openSearch();
@@ -321,10 +335,10 @@ document.addEventListener("keydown", (e) => {
    8. EMERGENCY MODAL
 ========================================================= */
 
-const emergencyModal    = document.getElementById("emergencyModal");
+const emergencyModal = document.getElementById("emergencyModal");
 const emergencyBackdrop = document.getElementById("emergencyBackdrop");
-const emergencyClose    = document.getElementById("emergencyClose");
-const emergencyBtn      = document.getElementById("emergencyBtn");
+const emergencyClose = document.getElementById("emergencyClose");
+const emergencyBtn = document.getElementById("emergencyBtn");
 
 function openEmergency() {
   if (!emergencyModal) return;
@@ -352,15 +366,14 @@ document.addEventListener("keydown", (e) => {
 
 
 /* =========================================================
-   9. MOBILE MENU TOGGLE
+   9. MOBILE MENU
 ========================================================= */
 
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const mobileNav     = document.getElementById("mobileNav");
+const mobileNav = document.getElementById("mobileNav");
 
 function toggleMobileMenu() {
   if (!mobileNav) return;
-
   const isOpen = mobileNav.classList.toggle("open");
   mobileMenuBtn.classList.toggle("active", isOpen);
   mobileNav.setAttribute("aria-hidden", isOpen ? "false" : "true");
@@ -403,67 +416,34 @@ window.addEventListener("resize", () => {
 
 
 /* =========================================================
-   10. BACK TO TOP
-========================================================= */
-
-const backToTopBtn = document.getElementById("backToTop");
-
-window.addEventListener("scroll", () => {
-  if (!backToTopBtn) return;
-
-  if (window.scrollY > 400) {
-    backToTopBtn.classList.add("show");
-  } else {
-    backToTopBtn.classList.remove("show");
-  }
-});
-
-if (backToTopBtn) {
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });
-}
-
-
-/* =========================================================
-   11. SMOOTH SCROLL
+   10. SMOOTH SCROLL
 ========================================================= */
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", function (e) {
     const targetId = this.getAttribute("href");
-
     if (targetId === "#" || targetId.length < 2) return;
 
     const targetEl = document.querySelector(targetId);
     if (!targetEl) return;
 
     e.preventDefault();
-
     const headerHeight = 80;
     const targetPosition = targetEl.offsetTop - headerHeight;
 
-    window.scrollTo({
-      top: targetPosition,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: targetPosition, behavior: "smooth" });
   });
 });
 
 
 /* =========================================================
-   12. JSON DATA LOADING SYSTEM (Fixed Path)
+   11. JSON DATA LOADING
 ========================================================= */
 
 async function loadJSON(path) {
   try {
-    // pages/ ফোল্ডারে থাকলে ../ যোগ করুন
     const isPages = window.location.pathname.includes("/pages/");
     const fullPath = isPages ? "../" + path : path;
-
     const response = await fetch(fullPath);
     if (!response.ok) throw new Error("Failed to load " + fullPath);
     return await response.json();
@@ -475,14 +455,12 @@ async function loadJSON(path) {
 
 
 /* =========================================================
-   13. RENDER FUNCTIONS
+   12. RENDER FUNCTIONS
 ========================================================= */
 
-// UNIONS
 async function renderUnions() {
   const grid = document.querySelector(".union-grid");
   if (!grid) return;
-
   const unions = await loadJSON("data/unions.json");
   if (unions.length === 0) return;
 
@@ -497,11 +475,9 @@ async function renderUnions() {
   `).join("");
 }
 
-// TOURISM
 async function renderTourism() {
-  const grid = document.querySelector("#tourism .card-grid, #tourismGrid");
+  const grid = document.querySelector("#tourism .card-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/tourism.json");
   if (items.length === 0) return;
 
@@ -515,11 +491,9 @@ async function renderTourism() {
   `).join("");
 }
 
-// EDUCATION
 async function renderEducation() {
-  const grid = document.querySelector("#education .card-grid, #educationGrid");
+  const grid = document.querySelector("#education .card-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/education.json");
   if (items.length === 0) return;
 
@@ -533,11 +507,9 @@ async function renderEducation() {
   `).join("");
 }
 
-// HEALTH
 async function renderHealth() {
-  const grid = document.querySelector("#health .card-grid, #healthGrid");
+  const grid = document.querySelector("#health .card-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/health.json");
   if (items.length === 0) return;
 
@@ -551,11 +523,9 @@ async function renderHealth() {
   `).join("");
 }
 
-// BUSINESS
 async function renderBusiness() {
-  const grid = document.querySelector("#business .card-grid, #businessGrid");
+  const grid = document.querySelector("#business .card-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/business.json");
   if (items.length === 0) return;
 
@@ -569,11 +539,9 @@ async function renderBusiness() {
   `).join("");
 }
 
-// PRODUCTS
 async function renderProducts() {
-  const grid = document.querySelector("#products .card-grid, #productsGrid");
+  const grid = document.querySelector("#products .card-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/products.json");
   if (items.length === 0) return;
 
@@ -587,11 +555,9 @@ async function renderProducts() {
   `).join("");
 }
 
-// GALLERY
 async function renderGallery() {
-  const grid = document.querySelector(".gallery-grid, #galleryGrid");
+  const grid = document.querySelector(".gallery-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/gallery.json");
   if (items.length === 0) return;
 
@@ -603,11 +569,9 @@ async function renderGallery() {
   `).join("");
 }
 
-// EMERGENCY
 async function renderEmergency() {
   const grid = document.querySelector(".emergency-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/emergency.json");
   if (items.length === 0) return;
 
@@ -621,11 +585,9 @@ async function renderEmergency() {
   `).join("");
 }
 
-// NEWS
 async function renderNews() {
-  const grid = document.querySelector(".news-grid, #newsGrid");
+  const grid = document.querySelector(".news-grid");
   if (!grid) return;
-
   const items = await loadJSON("data/news.json");
   if (items.length === 0) return;
 
@@ -644,7 +606,7 @@ async function renderNews() {
 
 
 /* =========================================================
-   14. ALL RENDER ON DOM READY
+   13. INIT
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -661,21 +623,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 /* =========================================================
-   15. WELCOME TOAST
+   14. WELCOME TOAST
 ========================================================= */
 
 window.addEventListener("load", () => {
+  const totalSceneDuration = scenes.reduce((a, s) => a + s.duration, 0);
   setTimeout(() => {
     if (!sessionStorage.getItem("welcomeShown")) {
       showToast("🌴 Welcome to OUR MAHESHKHALI", "success", 4000);
       sessionStorage.setItem("welcomeShown", "true");
     }
-  }, 2500);
+  }, totalSceneDuration + 1500);
 });
 
 
 /* =========================================================
-   END
+   15. LOG
 ========================================================= */
 
 console.log("🌴 OUR MAHESHKHALI loaded");

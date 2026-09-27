@@ -1,5 +1,6 @@
 [
-  { "id": 1, "title": "Welcome to OUR MAHESHKHALI", "titleBn": "আমাদের মহেশখালীতে স্বাগতম", "category": "News", "summary": "মহেশখালীর ডিজিটাল প্ল্যাটফর্ম চালু হয়েছে।", "date": "2026", "status": "✓ Verified" },
-  { "id": 2, "title": "Explore Maheshkhali", "titleBn": "মহেশখালী ঘুরে দেখুন", "category": "Tourism", "summary": "আদিনাথ মন্দির, মৈনাক পাহাড়, সোনাদিয়া দ্বীপ।", "date": "2026", "status": "✓ Verified" },
-  { "id": 3, "title": "Community Contributions", "titleBn": "কমিউনিটি অবদান", "category": "Community", "summary": "মহেশখালীর মানুষ এখন নিজের তথ্য যুক্ত করতে পারবেন।", "date": "2026", "status": "🟡 Pending" }
+  { "id":1, "title_bn":"ওয়েবসাইট চালু হলো", "title_en":"OUR MAHESHKHALI website launched", "date":"2026-01-15",
+    "excerpt_bn":"মহেশখালীবাসীর জন্য নতুন ডিজিটাল প্ল্যাটফর্ম চালু হলো।", "category":"Announcement" },
+  { "id":2, "title_bn":"শিবচতুর্দশী মেলার প্রস্তুতি", "title_en":"Preparations for Shiva Chaturdashi Fair", "date":"2026-02-01",
+    "excerpt_bn":"আদিনাথ মন্দিরে বার্ষিক মেলার প্রস্তুতি শুরু হয়েছে।", "category":"Culture" }
 ]

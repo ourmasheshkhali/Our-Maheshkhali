@@ -1,6 +1,6 @@
 [
-  { "id": 1, "name": "Primary Schools", "nameBn": "প্রাথমিক বিদ্যালয়", "icon": "🏫", "desc": "সরকারি ও বেসরকারি প্রাথমিক বিদ্যালয়।", "link": "pages/education.html#primary" },
-  { "id": 2, "name": "Secondary Schools", "nameBn": "মাধ্যমিক বিদ্যালয়", "icon": "🎓", "desc": "উচ্চ বিদ্যালয় ও নিম্নমাধ্যমিক প্রতিষ্ঠান।", "link": "pages/education.html#secondary" },
-  { "id": 3, "name": "Colleges", "nameBn": "কলেজ", "icon": "🏛️", "desc": "মহেশখালীর কলেজ ও উচ্চশিক্ষা প্রতিষ্ঠান।", "link": "pages/education.html#college" },
-  { "id": 4, "name": "Madrasas", "nameBn": "মাদ্রাসা", "icon": "📖", "desc": "দাখিল, আলিম ও কওমি মাদ্রাসা।", "link": "pages/education.html#madrasa" }
+  { "id":1, "icon":"🏫", "level":"primary", "name":"Maheshkhali Government Primary School", "name_bn":"মহেশখালী সরকারি প্রাথমিক বিদ্যালয়", "location":"Bara Maheshkhali", "note":"SAMPLE — verify before publishing" },
+  { "id":2, "icon":"🏫", "level":"secondary", "name":"Maheshkhali High School", "name_bn":"মহেশখালী উচ্চ বিদ্যালয়", "location":"Bara Maheshkhali", "note":"SAMPLE — verify before publishing" },
+  { "id":3, "icon":"🏫", "level":"secondary", "name":"Dhalghata High School", "name_bn":"ধলঘাটা উচ্চ বিদ্যালয়", "location":"Dhalghata", "note":"SAMPLE — verify before publishing" },
+  { "id":4, "icon":"🏛️", "level":"college", "name":"Maheshkhali College", "name_bn":"মহেশখালী কলেজ", "location":"Bara Maheshkhali", "note":"SAMPLE — verify before publishing" }
 ]

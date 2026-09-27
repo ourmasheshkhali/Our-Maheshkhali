@@ -1,6 +1,11 @@
 [
-  { "id": 1, "name": "Salt", "nameBn": "লবণ", "icon": "🧂", "desc": "মহেশখালীর ঐতিহ্যবাহী লবণ উৎপাদন।", "link": "pages/local-products.html#salt" },
-  { "id": 2, "name": "Shutki", "nameBn": "শুঁটকি", "icon": "🐟", "desc": "শুঁটকি — উপকূলীয় অঞ্চলের ঐতিহ্যবাহী পণ্য।", "link": "pages/local-products.html#shutki" },
-  { "id": 3, "name": "Betel Leaf", "nameBn": "পান", "icon": "🌿", "desc": "পান — মহেশখালীর গুরুত্বপূর্ণ অর্থকারী ফসল।", "link": "pages/local-products.html#betel" },
-  { "id": 4, "name": "Coconut", "nameBn": "নারকেল", "icon": "🥥", "desc": "নারকেল ও স্থানীয় কৃষিপণ্য।", "link": "pages/local-products.html#coconut" }
+  { "id":1, "slug":"salt", "icon":"🧂", "name_en":"Sea Salt", "name_bn":"লবণ",
+    "description_bn":"মহেশখালীর উপকূলীয় ইউনিয়নগুলোতে (বিশেষত কুতুবজোম) ঐতিহ্যগতভাবে লবণ চাষ হয়।",
+    "description_en":"Traditionally cultivated in Maheshkhali's coastal unions, especially Kutubjom." },
+  { "id":2, "slug":"shutki", "icon":"🐟", "name_en":"Dried Fish (Shutki)", "name_bn":"শুঁটকি",
+    "description_bn":"উপকূলীয় জেলে সম্প্রদায়ের প্রধান জীবিকা ও স্থানীয় ঐতিহ্যবাহী পণ্য।",
+    "description_en":"A traditional local product and major livelihood of the coastal fishing community." },
+  { "id":3, "slug":"betel-leaf", "icon":"🌿", "name_en":"Betel Leaf (Paan)", "name_bn":"পান",
+    "description_bn":"মহেশখালীর কৃষি অর্থনীতিতে গুরুত্বপূর্ণ একটি অর্থকরী ফসল।",
+    "description_en":"An important cash crop in Maheshkhali's agricultural economy." }
 ]

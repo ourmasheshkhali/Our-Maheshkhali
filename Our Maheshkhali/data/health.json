@@ -1,6 +1,5 @@
 [
-  { "id": 1, "name": "Hospitals", "nameBn": "হাসপাতাল", "icon": "🏥", "desc": "উপজেলা স্বাস্থ্য কমপ্লেক্স ও হাসপাতাল।", "link": "pages/health.html#hospital" },
-  { "id": 2, "name": "Clinics", "nameBn": "ক্লিনিক", "icon": "🏨", "desc": "স্থানীয় ক্লিনিক ও ডায়াগনস্টিক সেন্টার।", "link": "pages/health.html#clinic" },
-  { "id": 3, "name": "Pharmacies", "nameBn": "ফার্মেসি", "icon": "💊", "desc": "ঔষধের দোকান ও ফার্মেসি।", "link": "pages/health.html#pharmacy" },
-  { "id": 4, "name": "Ambulance", "nameBn": "অ্যাম্বুলেন্স", "icon": "🚑", "desc": "জরুরি অ্যাম্বুলেন্স সেবা।", "link": "pages/health.html#ambulance" }
+  { "id":1, "icon":"🏥", "type":"hospital", "name":"Maheshkhali Upazila Health Complex", "name_bn":"মহেশখালী উপজেলা স্বাস্থ্য কমপ্লেক্স", "location":"Bara Maheshkhali", "phone":"", "note":"SAMPLE — verify before publishing" },
+  { "id":2, "icon":"🏨", "type":"clinic", "name":"Dhalghata Community Clinic", "name_bn":"ধলঘাটা কমিউনিটি ক্লিনিক", "location":"Dhalghata", "phone":"", "note":"SAMPLE — verify before publishing" },
+  { "id":3, "icon":"🏨", "type":"clinic", "name":"Kutubjom Community Clinic", "name_bn":"কুতুবজোম কমিউনিটি ক্লিনিক", "location":"Kutubjom", "phone":"", "note":"SAMPLE — verify before publishing" }
 ]

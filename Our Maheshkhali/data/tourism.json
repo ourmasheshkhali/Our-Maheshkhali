@@ -1,109 +1,14 @@
 [
-  {
-    "id": 1,
-    "union": "Dhalghata",
-    "unionBn": "ধলঘাটা",
-    "icon": "🌴",
-    "color": "green",
-    "attractions": [
-      { "name": "Dhalghata Coastal Area", "nameBn": "ধলঘাটা উপকূলীয় এলাকা", "icon": "🌊" },
-      { "name": "Dhalghata Beach Area", "nameBn": "ধলঘাটা সৈকত এলাকা", "icon": "🏖️" },
-      { "name": "Coastal Landscape", "nameBn": "উপকূলীয় ভূদৃশ্য", "icon": "🌅" },
-      { "name": "Fishing Village & Local Life", "nameBn": "জেলে গ্রাম ও স্থানীয় জীবন", "icon": "🎣" }
-    ]
-  },
-  {
-    "id": 2,
-    "union": "Matarbari",
-    "unionBn": "মাতারবাড়ী",
-    "icon": "🌊",
-    "color": "blue",
-    "attractions": [
-      { "name": "Matarbari Coastal Area", "nameBn": "মাতারবাড়ী উপকূলীয় এলাকা", "icon": "🌊" },
-      { "name": "Matarbari Port Area", "nameBn": "মাতারবাড়ী বন্দর এলাকা", "icon": "⚓" },
-      { "name": "Matarbari Sea View", "nameBn": "মাতারবাড়ী সমুদ্র দৃশ্য", "icon": "🌅" },
-      { "name": "Fishing & Coastal Life", "nameBn": "মৎস্যজীবন ও উপকূলীয় জীবন", "icon": "🎣" }
-    ]
-  },
-  {
-    "id": 3,
-    "union": "Kalarmarchhara",
-    "unionBn": "কালারমারছড়া",
-    "icon": "🌿",
-    "color": "green",
-    "attractions": [
-      { "name": "Kalarmarchhara Coastal Area", "nameBn": "কালারমারছড়া উপকূলীয় এলাকা", "icon": "🌊" },
-      { "name": "Hill & Green Landscape", "nameBn": "পাহাড় ও সবুজ ভূদৃশ্য", "icon": "⛰️" },
-      { "name": "Salt Fields", "nameBn": "লবণ মাঠ", "icon": "🧂" },
-      { "name": "Rural Nature", "nameBn": "গ্রামীণ প্রকৃতি", "icon": "🌾" }
-    ]
-  },
-  {
-    "id": 4,
-    "union": "Shaplapur",
-    "unionBn": "শাপলাপুর",
-    "icon": "🌸",
-    "color": "pink",
-    "attractions": [
-      { "name": "Shaplapur Coastal Area", "nameBn": "শাপলাপুর উপকূলীয় এলাকা", "icon": "🌊" },
-      { "name": "Shaplapur Sea View", "nameBn": "শাপলাপুর সমুদ্র দৃশ্য", "icon": "🌅" },
-      { "name": "Coastal Nature", "nameBn": "উপকূলীয় প্রকৃতি", "icon": "🌿" },
-      { "name": "Local Landscape", "nameBn": "স্থানীয় ভূদৃশ্য", "icon": "🏞️" }
-    ]
-  },
-  {
-    "id": 5,
-    "union": "Hoanak",
-    "unionBn": "হোয়ানক",
-    "icon": "🌊",
-    "color": "blue",
-    "attractions": [
-      { "name": "Hoanak Hill Area", "nameBn": "হোয়ানক পাহাড় এলাকা", "icon": "⛰️" },
-      { "name": "Green Hill Landscape", "nameBn": "সবুজ পাহাড়ি ভূদৃশ্য", "icon": "🌿" },
-      { "name": "Salt Fields", "nameBn": "লবণ মাঠ", "icon": "🧂" },
-      { "name": "Rural Nature", "nameBn": "গ্রামীণ প্রকৃতি", "icon": "🌾" }
-    ]
-  },
-  {
-    "id": 6,
-    "union": "Bara Maheshkhali",
-    "unionBn": "বড় মহেশখালী",
-    "icon": "🏝️",
-    "color": "gold",
-    "attractions": [
-      { "name": "Adinath Temple", "nameBn": "আদিনাথ মন্দির", "icon": "🛕" },
-      { "name": "Mainak Hill", "nameBn": "মৈনাক পাহাড়", "icon": "⛰️" },
-      { "name": "Adinath Hill View", "nameBn": "আদিনাথ পাহাড় দৃশ্য", "icon": "🌄" },
-      { "name": "Maheshkhali Buddhist Temple", "nameBn": "মহেশখালী বৌদ্ধ মন্দির", "icon": "☸️" },
-      { "name": "Rakhine Cultural Area", "nameBn": "রাখাইন সাংস্কৃতিক এলাকা", "icon": "🎭" }
-    ]
-  },
-  {
-    "id": 7,
-    "union": "Kutubjom",
-    "unionBn": "কুতুবজোম",
-    "icon": "🌊",
-    "color": "blue",
-    "attractions": [
-      { "name": "Sonadia Island", "nameBn": "সোনাদিয়া দ্বীপ", "icon": "🏝️" },
-      { "name": "Sonadia Beach", "nameBn": "সোনাদিয়া সৈকত", "icon": "🏖️" },
-      { "name": "Sonadia Coastal Area", "nameBn": "সোনাদিয়া উপকূলীয় এলাকা", "icon": "🌊" },
-      { "name": "Migratory Bird Area", "nameBn": "পরিযায়ী পাখির এলাকা", "icon": "🦅" },
-      { "name": "Fishing Village", "nameBn": "জেলে গ্রাম", "icon": "🎣" },
-      { "name": "Dry Fish Production Area", "nameBn": "শুটকি উৎপাদন এলাকা", "icon": "🐟" }
-    ]
-  },
-  {
-    "id": 8,
-    "union": "Chhota Maheshkhali",
-    "unionBn": "ছোট মহেশখালী",
-    "icon": "🌿",
-    "color": "green",
-    "attractions": [
-      { "name": "Rural Nature", "nameBn": "গ্রামীণ প্রকৃতি", "icon": "🌾" },
-      { "name": "Salt Fields", "nameBn": "লবণ মাঠ", "icon": "🧂" },
-      { "name": "Agricultural Landscape", "nameBn": "কৃষি ভূদৃশ্য", "icon": "🌱" },
-      { "name": "Village & Coastal Life", "nameBn": "গ্রাম ও উপকূলীয় জীবন", "icon": "🏘️" }
-    ]
-  }
+  { "id":1, "slug":"adinath", "icon":"🛕", "name_en":"Adinath Temple", "name_bn":"আদিনাথ মন্দির",
+    "category":"Heritage", "description_bn":"মহেশখালীর মাথাভাঙ্গা পাহাড়ে অবস্থিত প্রাচীন হিন্দু মন্দির, প্রতি বছর শিবচতুর্দশী মেলা এখানে হয়।",
+    "description_en":"An ancient hilltop Hindu temple on Maithatta Hill, host to the annual Shiva Chaturdashi fair." },
+  { "id":2, "slug":"mainak", "icon":"⛰️", "name_en":"Mainak Hill", "name_bn":"মাইনাক পাহাড়",
+    "category":"Nature", "description_bn":"দ্বীপের অন্যতম উঁচু পাহাড়, চূড়া থেকে পুরো মহেশখালী ও সমুদ্র দেখা যায়।",
+    "description_en":"One of the island's highest hills, offering panoramic views of Maheshkhali and the sea." },
+  { "id":3, "slug":"sonadia", "icon":"🏝️", "name_en":"Sonadia Island", "name_bn":"সোনাদিয়া দ্বীপ",
+    "category":"Nature", "description_bn":"ম্যানগ্রোভ ও পরিযায়ী পাখির জন্য পরিচিত একটি ছোট দ্বীপ, ইকো-ট্যুরিজমের সম্ভাবনাময় স্থান।",
+    "description_en":"A small island known for mangroves and migratory birds, a promising eco-tourism spot." },
+  { "id":4, "slug":"dhalghata-beach", "icon":"🌊", "name_en":"Dhalghata Coastal Belt", "name_bn":"ধলঘাটা উপকূলীয় এলাকা",
+    "category":"Nature", "description_bn":"সবুজ ম্যানগ্রোভ ও শান্ত উপকূলীয় দৃশ্যের জন্য পরিচিত।",
+    "description_en":"Known for its green mangroves and calm coastal scenery." }
 ]

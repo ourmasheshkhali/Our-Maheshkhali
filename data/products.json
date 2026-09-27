@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Salt",
+    "nameBn": "লবণ",
+    "icon": "🧂",
+    "desc": "মহেশখালীর ঐতিহ্যবাহী লবণ উৎপাদন।",
+    "link": "pages/local-products.html#salt"
+  },
+  {
+    "id": 2,
+    "name": "Shutki",
+    "nameBn": "শুঁটকি",
+    "icon": "🐟",
+    "desc": "শুঁটকি — উপকূলীয় অঞ্চলের ঐতিহ্যবাহী পণ্য।",
+    "link": "pages/local-products.html#shutki"
+  },
+  {
+    "id": 3,
+    "name": "Betel Leaf",
+    "nameBn": "পান",
+    "icon": "🌿",
+    "desc": "পান — মহেশখালীর গুরুত্বপূর্ণ অর্থকারী ফসল।",
+    "link": "pages/local-products.html#betel"
+  },
+  {
+    "id": 4,
+    "name": "Coconut",
+    "nameBn": "নারকেল",
+    "icon": "🥥",
+    "desc": "নারকেল ও স্থানীয় কৃষিপণ্য।",
+    "link": "pages/local-products.html#coconut"
+  }
+]

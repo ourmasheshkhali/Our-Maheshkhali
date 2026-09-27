@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Community Event",
+    "titleBn": "কমিউনিটি ইভেন্ট",
+    "date": "2026",
+    "category": "Community",
+    "desc": "স্থানীয় কমিউনিটি কার্যক্রম।"
+  },
+  {
+    "id": 2,
+    "title": "Cultural Event",
+    "titleBn": "সাংস্কৃতিক ইভেন্ট",
+    "date": "2026",
+    "category": "Culture",
+    "desc": "স্থানীয় সাংস্কৃতিক অনুষ্ঠান।"
+  }
+]

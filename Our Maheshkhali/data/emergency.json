@@ -1,44 +1,8 @@
 [
-  {
-    "name": "National Emergency",
-    "nameBn": "জাতীয় জরুরি সেবা",
-    "number": "999",
-    "icon": "🚨",
-    "desc": "Police · Fire · Ambulance"
-  },
-  {
-    "name": "Disaster Helpline",
-    "nameBn": "দুর্যোগ হেল্পলাইন",
-    "number": "1090",
-    "icon": "🌊",
-    "desc": "Disaster related assistance"
-  },
-  {
-    "name": "Fire Service",
-    "nameBn": "ফায়ার সার্ভিস",
-    "number": "16163",
-    "icon": "🔥",
-    "desc": "Fire & Civil Defence"
-  },
-  {
-    "name": "Government Info",
-    "nameBn": "সরকারি তথ্য",
-    "number": "333",
-    "icon": "🏛️",
-    "desc": "Government information"
-  },
-  {
-    "name": "Women & Children",
-    "nameBn": "নারী ও শিশু",
-    "number": "109",
-    "icon": "🛡️",
-    "desc": "Assistance and support"
-  },
-  {
-    "name": "Child Helpline",
-    "nameBn": "শিশু হেল্পলাইন",
-    "number": "1098",
-    "icon": "👶",
-    "desc": "Child protection"
-  }
+  { "name": "National Emergency", "nameBn": "জাতীয় জরুরি সেবা", "number": "999", "icon": "🚨", "desc": "Police · Fire · Ambulance" },
+  { "name": "Disaster Helpline", "nameBn": "দুর্যোগ হেল্পলাইন", "number": "1090", "icon": "🌊", "desc": "Disaster related assistance" },
+  { "name": "Fire Service", "nameBn": "ফায়ার সার্ভিস", "number": "16163", "icon": "🔥", "desc": "Fire & Civil Defence" },
+  { "name": "Government Info", "nameBn": "সরকারি তথ্য", "number": "333", "icon": "🏛️", "desc": "Government information" },
+  { "name": "Women & Children", "nameBn": "নারী ও শিশু", "number": "109", "icon": "🛡️", "desc": "Assistance and support" },
+  { "name": "Child Helpline", "nameBn": "শিশু হেল্পলাইন", "number": "1098", "icon": "👶", "desc": "Child protection" }
 ]

@@ -1,18 +1,4 @@
 [
-  {
-    "id": 1,
-    "title": "Welcome Notice",
-    "titleBn": "স্বাগত নোটিশ",
-    "date": "2026",
-    "source": "OUR MAHESHKHALI",
-    "desc": "মহেশখালীর ডিজিটাল প্ল্যাটফর্ম চালু হয়েছে।"
-  },
-  {
-    "id": 2,
-    "title": "Information Update",
-    "titleBn": "তথ্য আপডেট",
-    "date": "2026",
-    "source": "OUR MAHESHKHALI",
-    "desc": "নতুন তথ্য যোগ করা হবে।"
-  }
+  { "id": 1, "title": "Welcome Notice", "titleBn": "স্বাগত নোটিশ", "date": "2026", "source": "OUR MAHESHKHALI", "desc": "মহেশখালীর ডিজিটাল প্ল্যাটফর্ম চালু হয়েছে।" },
+  { "id": 2, "title": "Information Update", "titleBn": "তথ্য আপডেট", "date": "2026", "source": "OUR MAHESHKHALI", "desc": "নতুন তথ্য যোগ করা হবে।" }
 ]

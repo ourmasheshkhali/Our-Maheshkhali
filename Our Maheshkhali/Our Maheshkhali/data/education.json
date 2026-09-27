@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Primary Schools",
+    "nameBn": "প্রাথমিক বিদ্যালয়",
+    "icon": "🏫",
+    "desc": "সরকারি ও বেসরকারি প্রাথমিক বিদ্যালয়।",
+    "link": "pages/education.html#primary"
+  },
+  {
+    "id": 2,
+    "name": "Secondary Schools",
+    "nameBn": "মাধ্যমিক বিদ্যালয়",
+    "icon": "🎓",
+    "desc": "উচ্চ বিদ্যালয় ও নিম্নমাধ্যমিক প্রতিষ্ঠান।",
+    "link": "pages/education.html#secondary"
+  },
+  {
+    "id": 3,
+    "name": "Colleges",
+    "nameBn": "কলেজ",
+    "icon": "🏛️",
+    "desc": "মহেশখালীর কলেজ ও উচ্চশিক্ষা প্রতিষ্ঠান।",
+    "link": "pages/education.html#college"
+  },
+  {
+    "id": 4,
+    "name": "Madrasas",
+    "nameBn": "মাদ্রাসা",
+    "icon": "📖",
+    "desc": "দাখিল, আলিম ও কওমি মাদ্রাসা।",
+    "link": "pages/education.html#madrasa"
+  }
+]

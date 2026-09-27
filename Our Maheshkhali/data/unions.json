@@ -1,66 +1,10 @@
 [
-  {
-    "id": 1,
-    "name": "Dhalghata",
-    "nameBn": "ধলঘাটা",
-    "icon": "🌴",
-    "desc": "উপকূলীয় জনপদ, নদী ও লবণ উৎপাদনের ঐতিহ্য।",
-    "link": "pages/about.html#dhalghata"
-  },
-  {
-    "id": 2,
-    "name": "Matarbari",
-    "nameBn": "মাতারবাড়ী",
-    "icon": "🌊",
-    "desc": "গভীর সমুদ্রবন্দর, বিদ্যুৎ ও শিল্প উন্নয়নের কেন্দ্র।",
-    "link": "pages/about.html#matarbari"
-  },
-  {
-    "id": 3,
-    "name": "Kalarmarchhara",
-    "nameBn": "কালারমারছড়া",
-    "icon": "🌿",
-    "desc": "পাহাড়, সমুদ্র, চিংড়ি ও মৎস্যসম্পদের সমন্বয়।",
-    "link": "pages/about.html#kalarmarchhara"
-  },
-  {
-    "id": 4,
-    "name": "Shaplapur",
-    "nameBn": "শাপলাপুর",
-    "icon": "🌸",
-    "desc": "শাপলার ঐতিহ্য, পাহাড় ও প্রণালীর জনপদ।",
-    "link": "pages/about.html#shaplapur"
-  },
-  {
-    "id": 5,
-    "name": "Hoanak",
-    "nameBn": "হোয়ানক",
-    "icon": "🌊",
-    "desc": "রাখাইন ঐতিহ্য, কৃষি ও মৎস্যসম্পদের অঞ্চল।",
-    "link": "pages/about.html#hoanak"
-  },
-  {
-    "id": 6,
-    "name": "Bara Maheshkhali",
-    "nameBn": "বড় মহেশখালী",
-    "icon": "🏝️",
-    "desc": "পান চাষ, লবণ ও কৃষির ঐতিহ্যবাহী জনপদ।",
-    "link": "pages/about.html#bara-maheshkhali"
-  },
-  {
-    "id": 7,
-    "name": "Kutubjom",
-    "nameBn": "কুতুবজোম",
-    "icon": "🌊",
-    "desc": "সোনাদিয়া দ্বীপ, ম্যানগ্রোভ ও উপকূলীয় ঐতিহ্য।",
-    "link": "pages/about.html#kutubjom"
-  },
-  {
-    "id": 8,
-    "name": "Chhota Maheshkhali",
-    "nameBn": "ছোট মহেশখালী",
-    "icon": "🌿",
-    "desc": "মহেশখালীর ৮ নম্বর ইউনিয়ন — তথ্য যোগ হবে।",
-    "link": "pages/about.html#chhota-maheshkhali"
-  }
+  { "id": 1, "name": "Dhalghata", "nameBn": "ধলঘাটা", "icon": "🌴", "desc": "উপকূলীয় জনপদ, নদী ও লবণ উৎপাদনের ঐতিহ্য।", "link": "pages/about.html#dhalghata" },
+  { "id": 2, "name": "Matarbari", "nameBn": "মাতারবাড়ী", "icon": "🌊", "desc": "গভীর সমুদ্রবন্দর, বিদ্যুৎ ও শিল্প উন্নয়নের কেন্দ্র।", "link": "pages/about.html#matarbari" },
+  { "id": 3, "name": "Kalarmarchhara", "nameBn": "কালারমারছড়া", "icon": "🌿", "desc": "পাহাড়, সমুদ্র, চিংড়ি ও মৎস্যসম্পদের সমন্বয়।", "link": "pages/about.html#kalarmarchhara" },
+  { "id": 4, "name": "Shaplapur", "nameBn": "শাপলাপুর", "icon": "🌸", "desc": "শাপলার ঐতিহ্য, পাহাড় ও প্রণালীর জনপদ।", "link": "pages/about.html#shaplapur" },
+  { "id": 5, "name": "Hoanak", "nameBn": "হোয়ানক", "icon": "🌊", "desc": "রাখাইন ঐতিহ্য, কৃষি ও মৎস্যসম্পদের অঞ্চল।", "link": "pages/about.html#hoanak" },
+  { "id": 6, "name": "Bara Maheshkhali", "nameBn": "বড় মহেশখালী", "icon": "🏝️", "desc": "পান চাষ, লবণ ও কৃষির ঐতিহ্যবাহী জনপদ।", "link": "pages/about.html#bara-maheshkhali" },
+  { "id": 7, "name": "Kutubjom", "nameBn": "কুতুবজোম", "icon": "🌊", "desc": "সোনাদিয়া দ্বীপ, ম্যানগ্রোভ ও উপকূলীয় ঐতিহ্য।", "link": "pages/about.html#kutubjom" },
+  { "id": 8, "name": "Chhota Maheshkhali", "nameBn": "ছোট মহেশখালী", "icon": "🌿", "desc": "মহেশখালীর ৮ নম্বর ইউনিয়ন — তথ্য যোগ হবে।", "link": "pages/about.html#chhota-maheshkhali" }
 ]

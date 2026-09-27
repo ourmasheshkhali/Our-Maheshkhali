@@ -4,10 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Local Products — OUR MAHESHKHALI</title>
+<meta name="description" content="Maheshkhali Local Products — লবণ, শুঁটকি, পান, নারকেল ও স্থানীয় পণ্য।" />
+<meta name="author" content="Badsha Solyman" />
+<meta name="theme-color" content="#800000" />
+<link rel="icon" type="image/png" href="../assets/images/our-maheshkhali-logo.png" />
 <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="main-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
@@ -28,52 +33,54 @@
       <a href="map.html" class="nav-link">🗺️ Map</a>
       <a href="emergency.html" class="nav-link">🚨 Emergency</a>
     </nav>
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
+<!-- MAIN -->
 <main id="main-content">
 
+  <!-- HERO -->
   <section class="hero" style="min-height: 40vh;">
     <div class="hero-content">
       <span class="hero-eyebrow">🛍️ LOCAL PRODUCTS</span>
       <h1 class="hero-title">Products of <span>Maheshkhali</span></h1>
-      <p class="hero-desc">মহেশখালীর ঐতিহ্যবাহী স্থানীয় পণ্য।</p>
+      <p class="hero-desc">
+        মহেশখালীর ঐতিহ্যবাহী স্থানীয় পণ্য ও উৎপাদন।
+      </p>
     </div>
   </section>
 
+  <!-- PRODUCTS CARDS -->
   <section class="products" id="products">
     <div class="container">
+
       <div class="section-heading">
         <span class="section-label">🛍️ LOCAL PRODUCTS</span>
         <h2>Products of Maheshkhali</h2>
         <p>স্থানীয় উৎপাদন ও পণ্য।</p>
       </div>
 
-      <div class="card-grid" id="productsGrid">
-        <!-- JS দিয়ে JSON থেকে ডেটা লোড হবে -->
-      </div>
+      <div class="card-grid" id="productsGrid"></div>
 
       <div class="section-action">
         <a href="../index.html" class="btn btn-gold">← Back to Home</a>
       </div>
+
     </div>
   </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-bottom">
-      <p>© 2026 OUR MAHESHKHALI. All rights reserved.</p>
+      <p>© <span id="year">2026</span> OUR MAHESHKHALI. All rights reserved.</p>
       <p class="footer-signature">🌴 আমাদের মহেশখালী — সবার ডিজিটাল প্ল্যাটফর্ম</p>
     </div>
   </div>
 </footer>
 
 <script src="../assets/js/main.js" defer></script>
-
 </body>
 </html>

@@ -1,8 +1,8 @@
 [
-  { "id": 1, "name": "Nature",   "nameBn": "প্রকৃতি",  "icon": "🌿", "type": "nature" },
-  { "id": 2, "name": "History",  "nameBn": "ইতিহাস",  "icon": "🏛️", "type": "history" },
-  { "id": 3, "name": "People",   "nameBn": "মানুষ",   "icon": "👥", "type": "people" },
-  { "id": 4, "name": "Culture",  "nameBn": "সংস্কৃতি", "icon": "🎭", "type": "culture" },
-  { "id": 5, "name": "Tourism",  "nameBn": "পর্যটন",  "icon": "🏝️", "type": "tourism" },
-  { "id": 6, "name": "Villages", "nameBn": "গ্রাম",    "icon": "🏡", "type": "villages" }
+  { "id": 1, "name": "Nature", "nameBn": "প্রকৃতি", "icon": "🌿", "type": "nature" },
+  { "id": 2, "name": "History", "nameBn": "ইতিহাস", "icon": "🏛️", "type": "history" },
+  { "id": 3, "name": "People", "nameBn": "মানুষ", "icon": "👥", "type": "people" },
+  { "id": 4, "name": "Culture", "nameBn": "সংস্কৃতি", "icon": "🎭", "type": "culture" },
+  { "id": 5, "name": "Tourism", "nameBn": "পর্যটন", "icon": "🏝️", "type": "tourism" },
+  { "id": 6, "name": "Villages", "nameBn": "গ্রাম", "icon": "🏡", "type": "villages" }
 ]

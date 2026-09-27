@@ -4,10 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Search — OUR MAHESHKHALI</title>
+<meta name="description" content="Search Maheshkhali — যেকোনো তথ্য খুঁজুন।" />
+<meta name="author" content="Badsha Solyman" />
+<meta name="theme-color" content="#800000" />
+<link rel="icon" type="image/png" href="../assets/images/our-maheshkhali-logo.png" />
 <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="main-header">
   <div class="header-inner">
     <a href="../index.html" class="brand">
@@ -28,28 +33,62 @@
       <a href="map.html" class="nav-link">🗺️ Map</a>
       <a href="emergency.html" class="nav-link">🚨 Emergency</a>
     </nav>
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
+<!-- MAIN -->
 <main id="main-content">
 
+  <!-- HERO -->
   <section class="hero" style="min-height: 40vh;">
     <div class="hero-content">
       <span class="hero-eyebrow">🔎 SEARCH</span>
       <h1 class="hero-title">Search <span>Maheshkhali</span></h1>
-      <p class="hero-desc">যেকোনো তথ্য খুঁজুন — ইউনিয়ন, স্কুল, হাসপাতাল, ব্যবসা।</p>
+      <p class="hero-desc">
+        যেকোনো তথ্য খুঁজুন — ইউনিয়ন, স্কুল, হাসপাতাল, ব্যবসা।
+      </p>
     </div>
   </section>
 
+  <!-- SEARCH -->
   <section class="about">
     <div class="container">
 
-      <div style="max-width:600px;margin:0 auto;">
-        <input type="search" placeholder="🔎 Search Maheshkhali..."
-               style="width:100%;padding:1rem 1.2rem;font-size:1rem;border:2px solid var(--gold);border-radius:12px;outline:none;" />
+      <div class="section-heading">
+        <span class="section-label">🔎 SEARCH</span>
+        <h2>Global Search</h2>
+        <p>যেকোনো তথ্য খুঁজুন।</p>
+      </div>
+
+      <div style="max-width:600px;margin:0 auto 2rem;">
+        <input
+          type="search"
+          placeholder="🔎 Search Maheshkhali..."
+          style="width:100%;padding:1rem 1.2rem;font-size:1rem;border:2px solid var(--gold);border-radius:12px;outline:none;font-family:inherit;"
+        />
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="about-icon">🏘️</span>
+          <h3>Unions</h3>
+          <strong>8টি</strong>
+        </div>
+        <div class="about-card">
+          <span class="about-icon">🌴</span>
+          <h3>Tourism</h3>
+          <strong>13টি</strong>
+        </div>
+        <div class="about-card">
+          <span class="about-icon">🎓</span>
+          <h3>Education</h3>
+          <strong>—</strong>
+        </div>
+        <div class="about-card">
+          <span class="about-icon">🏥</span>
+          <h3>Health</h3>
+          <strong>—</strong>
+        </div>
       </div>
 
       <div class="section-action" style="margin-top:2rem;">
@@ -61,16 +100,16 @@
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-bottom">
-      <p>© 2026 OUR MAHESHKHALI. All rights reserved.</p>
+      <p>© <span id="year">2026</span> OUR MAHESHKHALI. All rights reserved.</p>
       <p class="footer-signature">🌴 আমাদের মহেশখালী — সবার ডিজিটাল প্ল্যাটফর্ম</p>
     </div>
   </div>
 </footer>
 
 <script src="../assets/js/main.js" defer></script>
-
 </body>
 </html>

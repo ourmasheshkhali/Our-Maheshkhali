@@ -1,38 +1,6 @@
 [
-  {
-    "id": 1,
-    "name": "Adinath Temple",
-    "nameBn": "আদিনাথ মন্দির",
-    "icon": "🛕",
-    "type": "Heritage",
-    "desc": "মৈনাক পাহাড়ে অবস্থিত ঐতিহাসিক ধর্মীয় স্থান।",
-    "link": "pages/tourism.html#adinath"
-  },
-  {
-    "id": 2,
-    "name": "Mainak Hill",
-    "nameBn": "মৈনাক পাহাড়",
-    "icon": "⛰️",
-    "type": "Nature",
-    "desc": "মহেশখালীর অন্যতম পরিচিত প্রাকৃতিক আকর্ষণ।",
-    "link": "pages/tourism.html#mainak"
-  },
-  {
-    "id": 3,
-    "name": "Sonadia Island",
-    "nameBn": "সোনাদিয়া দ্বীপ",
-    "icon": "🏝️",
-    "type": "Island",
-    "desc": "উপকূলীয় প্রকৃতি ও জীববৈচিত্র্যের গুরুত্বপূর্ণ অংশ।",
-    "link": "pages/tourism.html#sonadia"
-  },
-  {
-    "id": 4,
-    "name": "Charpata Sea Beach",
-    "nameBn": "চরপাড়া সী-বিচ",
-    "icon": "🏖️",
-    "type": "Coastal",
-    "desc": "উপকূলীয় পর্যটন ও সৈকত।",
-    "link": "pages/tourism.html#beaches"
-  }
+  { "id": 1, "name": "Adinath Temple", "nameBn": "আদিনাথ মন্দির", "icon": "🛕", "type": "Heritage", "desc": "মৈনাক পাহাড়ে অবস্থিত ঐতিহাসিক ধর্মীয় স্থান।", "link": "pages/tourism.html#adinath" },
+  { "id": 2, "name": "Mainak Hill", "nameBn": "মৈনাক পাহাড়", "icon": "⛰️", "type": "Nature", "desc": "মহেশখালীর অন্যতম পরিচিত প্রাকৃতিক আকর্ষণ।", "link": "pages/tourism.html#mainak" },
+  { "id": 3, "name": "Sonadia Island", "nameBn": "সোনাদিয়া দ্বীপ", "icon": "🏝️", "type": "Island", "desc": "উপকূলীয় প্রকৃতি ও জীববৈচিত্র্যের গুরুত্বপূর্ণ অংশ।", "link": "pages/tourism.html#sonadia" },
+  { "id": 4, "name": "Charpata Sea Beach", "nameBn": "চরপাড়া সী-বিচ", "icon": "🏖️", "type": "Coastal", "desc": "উপকূলীয় পর্যটন ও সৈকত।", "link": "pages/tourism.html#beaches" }
 ]

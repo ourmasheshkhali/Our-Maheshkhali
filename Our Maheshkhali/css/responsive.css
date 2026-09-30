@@ -1,0 +1,551 @@
+/* ==========================================
+   OUR MAHESHKHALI — RESPONSIVE DESIGN
+   Developed by Badsha Solyman
+   ========================================== */
+
+/* ==========================================
+   LARGE DESKTOP (min-width: 1400px)
+   ========================================== */
+@media (min-width: 1400px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .sub-tagline {
+        font-size: 1.8rem;
+    }
+
+    .supporting {
+        font-size: 1.1rem;
+    }
+
+    .stage-1 .arabic {
+        font-size: 2.4rem;
+    }
+
+    .map-title {
+        font-size: 2rem;
+    }
+
+    .journey-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* ==========================================
+   LAPTOP (max-width: 992px)
+   ========================================== */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .sub-tagline {
+        font-size: 1.3rem;
+    }
+
+    .stage-1 .arabic {
+        font-size: 1.7rem;
+    }
+
+    .stage-1 .english {
+        font-size: 1.05rem;
+    }
+
+    .stage-1 .bangla {
+        font-size: 1rem;
+    }
+
+    .topbar-center {
+        display: none;
+    }
+
+    .journey-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================
+   TABLET (max-width: 768px)
+   ========================================== */
+@media (max-width: 768px) {
+
+    /* ---------- INTRO SCREEN ---------- */
+    .intro-lang-btn {
+        top: 15px;
+        right: 15px;
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
+
+    .skip-btn {
+        top: 15px;
+        left: 15px;
+        padding: 8px 16px;
+        font-size: 0.75rem;
+    }
+
+    .intro-auth {
+        top: 58px;
+        right: 15px;
+        gap: 6px;
+    }
+
+    .intro-auth-btn {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+
+    .progress-dots {
+        top: 55px;
+        gap: 6px;
+    }
+
+    .progress-dots .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* ---------- STAGE 1 ---------- */
+    .stage-1 .arabic {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .stage-1 .english {
+        font-size: 0.95rem;
+    }
+
+    .stage-1 .bangla {
+        font-size: 0.9rem;
+    }
+
+    .stage-1 .surah {
+        font-size: 0.85rem;
+    }
+
+    /* ---------- STAGE HEADINGS ---------- */
+    .map-title {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+
+    .map-subtitle {
+        font-size: 0.85rem;
+    }
+
+    /* ---------- BANGLADESH 3D MAP ---------- */
+    .bangladesh-3d {
+        height: 380px;
+    }
+
+    .bd-map-svg {
+        width: 90%;
+    }
+
+    .bangladesh-3d .location {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
+
+    /* ---------- MAP AREA ---------- */
+    .map-area {
+        height: 280px;
+    }
+
+    .location {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+
+    .distance-indicator {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+
+    /* ---------- 8 UNIONS MAP ---------- */
+    .maheshkhali-map {
+        height: 400px;
+    }
+
+    .union-point .union-name {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+
+    .union-point .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* ---------- JOURNEY SUMMARY ---------- */
+    .journey-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .journey-item {
+        padding: 15px 18px;
+        gap: 12px;
+    }
+
+    .journey-item.highlight {
+        grid-column: span 1;
+    }
+
+    .journey-icon {
+        font-size: 1.8rem;
+    }
+
+    .journey-item.highlight .journey-icon {
+        font-size: 2.2rem;
+    }
+
+    .journey-info h3 {
+        font-size: 0.68rem;
+    }
+
+    .journey-name {
+        font-size: 1rem;
+    }
+
+    .journey-item.highlight .journey-name {
+        font-size: 1.15rem;
+    }
+
+    .journey-desc {
+        font-size: 0.72rem;
+    }
+
+    .journey-title {
+        font-size: 1.3rem;
+    }
+
+    .journey-footer {
+        font-size: 0.8rem;
+    }
+
+    /* ---------- DEVELOPER CARD ---------- */
+    .developer-card.premium {
+        padding: 30px 22px;
+    }
+
+    .developer-card.premium h3 {
+        font-size: 1.5rem;
+    }
+
+    .developer-card.premium .card-icon {
+        font-size: 2.4rem;
+    }
+
+    .countdown-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .countdown-text {
+        font-size: 1.5rem;
+    }
+
+    /* ---------- TOPBAR ---------- */
+    #menu-btn {
+        display: flex;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .topbar-left {
+        flex: 1;
+        gap: 8px;
+    }
+
+    .topbar-left .logo {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .topbar-right {
+        gap: 5px;
+    }
+
+    .icon-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 0.7rem;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+        min-height: 70vh;
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+        letter-spacing: 1.5px;
+    }
+
+    .sub-tagline {
+        font-size: 1.1rem;
+    }
+
+    .supporting {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .hero-buttons button {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+        padding: 35px 15px;
+    }
+
+    .footer-name {
+        font-size: 1.1rem;
+    }
+
+    .footer-title {
+        font-size: 0.8rem;
+    }
+
+    /* ---------- CLICK HINT ---------- */
+    .click-hint {
+        font-size: 0.75rem;
+        bottom: 20px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE (max-width: 480px)
+   ========================================== */
+@media (max-width: 480px) {
+
+    /* ---------- INTRO SCREEN ---------- */
+    .intro-lang-btn,
+    .skip-btn {
+        padding: 6px 12px;
+        font-size: 0.68rem;
+    }
+
+    .intro-auth {
+        top: 52px;
+    }
+
+    .intro-auth-btn {
+        padding: 5px 10px;
+        font-size: 0.65rem;
+    }
+
+    .progress-dots {
+        top: 85px;
+        gap: 5px;
+    }
+
+    .progress-dots .dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    /* ---------- STAGE 1 ---------- */
+    .stage-1 .arabic {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .stage-1 .english {
+        font-size: 0.85rem;
+    }
+
+    .stage-1 .bangla {
+        font-size: 0.8rem;
+    }
+
+    .stage-1 .surah {
+        font-size: 0.75rem;
+    }
+
+    /* ---------- HEADINGS ---------- */
+    .map-title {
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+    }
+
+    /* ---------- 3D MAP ---------- */
+    .bangladesh-3d {
+        height: 320px;
+    }
+
+    .bangladesh-3d .location {
+        padding: 5px 10px;
+        font-size: 0.68rem;
+    }
+
+    /* ---------- MAP AREA ---------- */
+    .map-area {
+        height: 240px;
+    }
+
+    .location {
+        padding: 5px 10px;
+        font-size: 0.72rem;
+    }
+
+    /* ---------- 8 UNIONS ---------- */
+    .maheshkhali-map {
+        height: 350px;
+    }
+
+    .union-point .union-name {
+        font-size: 0.62rem;
+        padding: 2px 6px;
+    }
+
+    .union-point .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* ---------- JOURNEY ---------- */
+    .journey-item {
+        padding: 12px 14px;
+        gap: 10px;
+    }
+
+    .journey-icon {
+        font-size: 1.5rem;
+    }
+
+    .journey-item.highlight .journey-icon {
+        font-size: 1.8rem;
+    }
+
+    .journey-name {
+        font-size: 0.9rem;
+    }
+
+    .journey-item.highlight .journey-name {
+        font-size: 1rem;
+    }
+
+    .journey-desc {
+        font-size: 0.68rem;
+    }
+
+    .journey-title {
+        font-size: 1.1rem;
+    }
+
+    /* ---------- DEVELOPER CARD ---------- */
+    .developer-card.premium {
+        padding: 25px 18px;
+    }
+
+    .developer-card.premium h2 {
+        font-size: 1.1rem;
+    }
+
+    .developer-card.premium h3 {
+        font-size: 1.3rem;
+    }
+
+    .developer-card.premium .dev-info {
+        font-size: 0.8rem;
+    }
+
+    .countdown-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+
+    .countdown-text {
+        font-size: 1.3rem;
+    }
+
+    /* ---------- TOPBAR ---------- */
+    .topbar-left .logo {
+        font-size: 0.78rem;
+    }
+
+    .icon-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
+    }
+
+    #footer-btn,
+    #profile-btn {
+        display: none;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .sub-tagline {
+        font-size: 0.9rem;
+    }
+
+    .supporting {
+        font-size: 0.78rem;
+    }
+
+    .hero-buttons button {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 0.82rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer-name {
+        font-size: 1rem;
+    }
+
+    .footer-title {
+        font-size: 0.72rem;
+    }
+
+    #back-to-top {
+        font-size: 0.78rem;
+        padding: 10px 18px;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL MOBILE (max-width: 360px)
+   ========================================== */
+@media (max-width: 360px) {
+    .stage-1 .arabic {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.1rem;
+    }
+
+    .map-title {
+        font-size: 0.95rem;
+    }
+
+    .union-point .union-name {
+        font-size: 0.55rem;
+    }
+}
